@@ -1,4 +1,4 @@
-### [Hashes Exercise](https://materials.generalassemb.ly/bewd/new-york-city/20/lessons/3#classwork)
+# [Hashes Exercise](https://materials.generalassemb.ly/bewd/new-york-city/20/lessons/3#classwork)
 
 First, fork [this](https://github.com/BEWD-NYC-20/teddit_hashes) repository and run:
 
@@ -61,8 +61,9 @@ until input == 'exit'
 
   puts
   puts "Here is a list of all the stories:"
-  posts.each_with_index do |post, i|
-    puts "#{i+1}: #{post[:story]}, Current Upvotes: #{post[:upvotes]}"
+  1.upto(posts.size) do |n|
+    post = posts[n - 1]
+    puts "#{n}: #{post[:story]}, Current Upvotes: #{post[:upvotes]}"
   end
   puts
 
